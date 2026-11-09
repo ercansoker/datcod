@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datcod — Özel Yazılım, Mobil Uygulama ve Proje Yönetimi</title>
+  <meta name="description" content="Datcod; satınalma, idari işler, sipariş yönetimi ve depo–stok–planlama programları ile özel yazılım ve mobil uygulama geliştirme hizmetleri sunar. TYRONAI ile sistemlerinizi doğal dille yönetin." />
+  <meta name="theme-color" content="#070b16" />
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Datcod" />
+  <meta property="og:title" content="Datcod — İşinizi dijitalleştiren yazılım ortağınız" />
+  <meta property="og:description" content="Lojistik, satınalma, idari işler, sipariş yönetimi ve depo–stok–planlama programları. TYRONAI ile verilerinizi konuşarak yönetin." />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:url" content="https://datcod.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#anasayfa">İçeriğe geç</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#anasayfa" aria-label="Datcod ana sayfa">
+        <img class="brand-logo brand-logo-light" src="assets/img/logo.png" alt="Datcod — Data &amp; Code" width="681" height="201" />
+        <img class="brand-logo brand-logo-dark" src="assets/img/logo-dark.png" alt="" aria-hidden="true" width="681" height="201" />
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Ana menü">
+        <ul>
+          <li><a href="#urunler">Ürünler</a></li>
+          <li><a href="#cozumler">Hizmetler</a></li>
+          <li><a href="#surec">Süreç</a></li>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta" href="#iletisim">Teklif Al</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="anasayfa">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Kurumsal operasyon yazılımları</p>
+          <h1>
+            Satınalmadan sevkiyata,<br />
+            tüm operasyonunuz<br />
+            <span class="accent">tek sistemde.</span>
+          </h1>
+          <p class="lead">
+            Lojistik, satınalma, idari işler, sipariş yönetimi ve depo–stok–planlama programlarımız
+            birbirine bağlı çalışır. Talep açıldığı andan malın rafa girip müşteriye
+            teslim edildiği ana kadar her adım kayıt altında.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="#urunler">Ürünleri İncele</a>
+            <a class="btn btn-ghost btn-lg" href="#iletisim">Demo Talep Et</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="slider" id="heroSlider" aria-roledescription="karusel" aria-label="Datcod çözümleri">
+            <div class="slider-track">
+              <figure class="slide is-active" data-index="0">
+                <img src="assets/img/slide-1-depo.jpg" alt="Otomasyonlu akıllı depo: raflar, taşıma robotları, konveyör ve sevkiyat aracı" width="1024" height="868" fetchpriority="high" />
+                <figcaption>Depo, stok ve sevkiyat operasyonu</figcaption>
+              </figure>
+              <figure class="slide" data-index="1" aria-hidden="true">
+                <img src="assets/img/slide-2-satinalma.jpg" alt="Satınalma programı: talepten onaya ve siparişe uzanan süreç" width="1024" height="868" loading="lazy" />
+                <figcaption>Satınalma: talepten onaya, siparişten faturaya</figcaption>
+              </figure>
+              <figure class="slide" data-index="2" aria-hidden="true">
+                <img src="assets/img/slide-3-entegrasyon.jpg" alt="Mevcut ERP, e-ticaret ve muhasebe sistemleriyle entegrasyon" width="1024" height="868" loading="lazy" />
+                <figcaption>Mevcut sistemlerinizle çift yönlü entegrasyon</figcaption>
+              </figure>
+              <figure class="slide" data-index="3" aria-hidden="true">
+                <img src="assets/img/slide-4-mail.jpg" alt="E-posta ile gelen siparişin otomatik olarak sisteme işlenmesi" width="1024" height="868" loading="lazy" />
+                <figcaption>E-postadan gelen sipariş otomatik işlenir</figcaption>
+              </figure>
+              <figure class="slide" data-index="4" aria-hidden="true">
+                <img src="assets/img/slide-5-whatsapp.jpg" alt="WhatsApp mesajıyla gelen siparişin otomatik olarak sisteme işlenmesi" width="1024" height="868" loading="lazy" />
+                <figcaption>WhatsApp mesajı siparişe dönüşür</figcaption>
+              </figure>
+            </div>
+
+            <button class="slider-arrow prev" type="button" aria-label="Önceki görsel">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="slider-arrow next" type="button" aria-label="Sonraki görsel">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <div class="slider-dots" role="tablist" aria-label="Görsel seçimi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÜRÜNLER ============ -->
+    <section class="section" id="urunler">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Ürünlerimiz</p>
+          <h2>Beş program, tek veri tabanı.</h2>
+          <p class="section-lead">
+            Her biri tek başına kullanılabilir; birlikte kullanıldığında satınalma talebi,
+            stok hareketi ve müşteri siparişi aynı kayıt üzerinden akar. Aynı ürünü iki kez
+            girmezsiniz.
+          </p>
+        </header>
+
+        <div class="product-grid">
+          <article class="product product-lead reveal">
+            <div class="product-lead-main">
+              <div class="product-head">
+                <span class="product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M6.5 19.5c-2 0-3-1.2-3-2.7 0-3.2 8-2.3 8-5.6 0-1.6-1.2-2.7-3.2-2.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 19.5h2.8c2 0 3.2-1.1 3.2-2.7 0-3.3-8-2.4-8-5.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/><circle cx="6" cy="5.4" r="2.4" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="19.5" r="2.1" stroke="currentColor" stroke-width="1.6"/></svg>
+                </span>
+                <h3>Lojistik Programı</h3>
+              </div>
+              <p>
+                WhatsApp gruplarına düşen araç ve yük taleplerini yapay zekâ ile işe
+                dönüştürün; sefer, taşeron fiyatı, evrak, mutabakat ve ödeme aynı
+                kayıttan ilerlesin.
+              </p>
+            </div>
+            <ul class="chips">
+              <li class="chip-ai">Grup konuşmasından işe · yapay zekâ</li>
+              <li>WhatsApp entegrasyonu</li>
+              <li>Sefer ve iş takibi</li>
+              <li>Müşteri ve taşeron anlaşmaları</li>
+              <li>Tedarikçiden fiyat toplama</li>
+              <li>Pozisyonlar</li>
+              <li>Mutabakat ve ödeme takibi</li>
+              <li>Yurt dışı işler</li>
+            </ul>
+          </article>
+
+          <article class="product reveal">
+            <div class="product-head">
+              <span class="product-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M6 3.5h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14.5 3.7V8h4.3M8.5 12.5h7M8.5 16h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </span>
+              <h3>Satınalma Programı</h3>
+            </div>
+            <p>
+              Talepten ödemeye kadar tüm satınalma döngüsü tek yerde. Kim ne istedi,
+              kim onayladı, hangi tedarikçiden kaça alındı — hepsi kayıt altında.
+            </p>
+            <ul class="chips">
+              <li>Satınalma talebi</li>
+              <li>Çok kademeli onay motoru</li>
+              <li>Teklif toplama ve karşılaştırma</li>
+              <li>Fatura üçlü eşleştirme</li>
+              <li>Bütçe ve masraf merkezi</li>
+              <li>Tedarikçi karnesi</li>
+            </ul>
+          </article>
+
+          <article class="product reveal">
+            <div class="product-head">
+              <span class="product-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M3.5 20.5V6a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v14.5M13.5 10h6a1 1 0 0 1 1 1v9.5M2.5 20.5h19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.8 8.5h3.4M6.8 12h3.4M6.8 15.5h3.4M16.4 13.5h1.2M16.4 17h1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </span>
+              <h3>İdari İşler Programı</h3>
+            </div>
+            <p>
+              Sözleşmeler, şirket evrakları, demirbaşlar ve ekip görevleri — dosya
+              dolabında kaybolan işler tek sistemde toplanır, süresi geldiğinde hatırlatılır.
+            </p>
+            <ul class="chips">
+              <li>Organizasyon yapısı</li>
+              <li>Sözleşme yönetimi</li>
+              <li>Şirket evrak takibi</li>
+              <li>Demirbaş ve zimmet</li>
+              <li>Görev panosu</li>
+              <li>Tekrarlayan giderler</li>
+              <li>Rol bazlı yetki</li>
+            </ul>
+          </article>
+
+          <article class="product reveal">
+            <div class="product-head">
+              <span class="product-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M2.5 16.5V7.5a1 1 0 0 1 1-1h9v10h-10Zm10-7h3.6l2.9 3.1v3.9h-6.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.6"/></svg>
+              </span>
+              <h3>Sipariş Yönetim Sistemi</h3>
+            </div>
+            <p>
+              Sipariş nereden gelirse gelsin tek havuzda toplanır, hazırlanır, araca
+              yüklenir ve müşteriye teslim edilir. Her adımı ofisten canlı izlersiniz.
+            </p>
+            <ul class="chips">
+              <li>Çok kanallı sipariş havuzu</li>
+              <li class="chip-ai">Mesajdan siparişe · yapay zekâ</li>
+              <li>Müşteriye özel fiyat</li>
+              <li>Hazırlama ve sevkiyat</li>
+              <li>Araç ve rota optimizasyonu</li>
+              <li>Teslimat kanıtı</li>
+              <li>Filo yönetimi</li>
+            </ul>
+          </article>
+
+          <article class="product reveal">
+            <div class="product-head">
+              <span class="product-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M3.5 8.2 12 4l8.5 4.2v7.6L12 20l-8.5-4.2V8.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 12 3.5 8.2M12 12l8.5-3.8M12 12v8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </span>
+              <h3>Depo, Stok ve Planlama Programı</h3>
+            </div>
+            <p>
+              Hangi üründen kaç adet, hangi depoda, hangi rafta — her an net. Stok kritik
+              seviyeye inince sistem sizi uyarır, müşteriye "yok" demek zorunda kalmazsınız.
+            </p>
+            <ul class="chips">
+              <li>Raf bazlı stok takibi</li>
+              <li>Stok sayımı</li>
+              <li>Depolar arası transfer</li>
+              <li>Kritik stok uyarısı</li>
+              <li>Stok rezervasyonu</li>
+              <li>Barkodla mobil toplama</li>
+              <li>Excel ile aktarım</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- TYRONAI: ürün ailesinin yapay zekâ katmanı -->
+        <div class="tyronai-block" id="tyronai">
+          <div class="tyronai-card reveal">
+            <div class="tyronai-copy">
+            <p class="eyebrow light"><span class="dot" aria-hidden="true"></span> Yapay zekâ katmanı</p>
+            <h2 class="tyronai-title">TYRONAI</h2>
+            <p class="lead">
+              Yukarıdaki programların üzerine kurulur; mevcut sistemlerinizi de
+              <strong>altyapı değişikliğine gerek kalmadan</strong> akıllandırır. On-prem
+              çalışan yapay zekâ katmanıyla ERP, WMS ve saha verilerinizi doğal dil
+              sorgularıyla erişilebilir hale getirir.
+            </p>
+            <ul class="check-list">
+              <li>Veriniz sizin sunucunuzda kalır — dışarı çıkmaz</li>
+              <li>Rapor beklemeden, cümleyle sorgulama</li>
+              <li>Var olan veritabanınızın üzerine kurulur</li>
+            </ul>
+            <a class="btn btn-light" href="#iletisim">TYRONAI demosu iste</a>
+          </div>
+
+          <div class="tyronai-demo" role="img" aria-label="TYRONAI doğal dil sorgu örneği">
+            <div class="chat-line user">
+              Geçen ay en çok gecikme yaşanan 3 rotayı göster
+            </div>
+            <div class="chat-line bot">
+              <span class="bot-tag">TYRONAI</span>
+              <p>Temmuz ayında ortalama gecikmeye göre ilk 3 rota:</p>
+              <table>
+                <tr><td>Kartal → Gebze</td><td>42 dk</td></tr>
+                <tr><td>Hadımköy → Silivri</td><td>31 dk</td></tr>
+                <tr><td>Ümraniye → Tuzla</td><td>27 dk</td></tr>
+              </table>
+              <p class="muted">Kaynak: rota_seferleri · 1.284 kayıt</p>
+            </div>
+            <div class="chat-input" aria-hidden="true">
+              <span>Bir soru yazın…</span>
+              <i></i>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÇÖZÜMLER ============ -->
+    <section class="section" id="cozumler">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Hizmetlerimiz</p>
+          <h2>Hazır ürün yetmiyorsa, sıfırdan geliştiririz.</h2>
+          <p class="section-lead">
+            Ürünlerimizin dışında kalan ihtiyaçlar için analizden bakıma bütün adımları
+            üstleniyoruz. Mevcut sistemlerinize entegrasyon da bu kapsamda.
+          </p>
+        </header>
+
+        <div class="card-grid">
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="4" width="19" height="16" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 8.5h19M6 6.2h.01M8.6 6.2h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Web Proje Geliştirme</h3>
+            <p>Kurumsal portallardan operasyon panellerine, ölçeklenebilir ve bakımı kolay web uygulamaları.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Mobil Uygulama Geliştirme</h3>
+            <p>Saha ekipleri, depocular ve müşterileriniz için iOS ve Android uygulamaları; çevrimdışı çalışma desteğiyle.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="3.5" width="19" height="17" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M8 8v9M15 8v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Proje Yönetim Danışmanlığı</h3>
+            <p>Devam eden projelerinizde kapsam, ekip ve teslim disiplinini kuruyoruz; süreçleri ölçülebilir hale getiriyoruz.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 20h18M6.5 20v-6M11.5 20V7M16.5 20v-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Analiz Hizmetleri</h3>
+            <p>İhtiyaç analizi, kullanıcı hikâyeleri ve bilgi mimarisi. Kod yazılmadan önce doğru soruları soruyoruz.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Backend Servis &amp; Mimari</h3>
+            <p>API tasarımı, entegrasyonlar ve yük altında ayakta kalan mimari. Mevcut sistemlerinize bağlanırız.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9.5 14.5 5 10l4.5-4.5M14.5 9.5 19 14l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 19.5h17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Sistem Entegrasyonları</h3>
+            <p>ERP, e-ticaret ve muhasebe sistemlerinizle çift yönlü veri akışı. Mevcut yatırımınız yerinde kalır.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v18M3.5 9.5h17M3.5 14.5h17" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            <h3>UX &amp; Arayüz Tasarımı</h3>
+            <p>Kullanılabilirlik prensiplerine dayalı, günün trendlerine uygun ve gerçekten kullanılan arayüzler.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SÜREÇ ============ -->
+    <section class="section section-alt" id="surec">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Nasıl çalışıyoruz</p>
+          <h2>Altı adımlı, sürprizsiz bir yol haritası.</h2>
+          <p class="section-lead">
+            Her aşamanın çıktısı belli, sorumlusu belli. Projenin hangi noktada olduğunu
+            her an görebilirsiniz.
+          </p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-no">01</span>
+            <h3>Analiz</h3>
+            <p>Proje içindeki yapı ve rolleri tanımlıyoruz. Kullanılacak teknoloji, altyapı ve proje yönetim yaklaşımına birlikte karar veriyoruz.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-no">02</span>
+            <h3>Planlama</h3>
+            <p>Kullanıcı hikâyeleri ve bilgi mimarisiyle ürünün işlevsel tanımlarını çıkarıyor, süreç akışını hazırlıyoruz.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-no">03</span>
+            <h3>Tasarım</h3>
+            <p>Kullanılabilirlik prensiplerine uygun, estetik ve öğrenmesi kolay arayüzler oluşturuyoruz.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-no">04</span>
+            <h3>Geliştirme</h3>
+            <p>Yazılımın ilk sürümünü geliştirip test ediyoruz. Tespit edilen sorunları ve hataları düzeltiyoruz.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-no">05</span>
+            <h3>Pilot &amp; Eğitim</h3>
+            <p>Kullanıma açılan uygulamayı planlanan süre boyunca yakın takibe alıyor, ekip eğitimlerini bu aşamada tamamlıyoruz.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-no">06</span>
+            <h3>Bakım</h3>
+            <p>Sistemi değişen koşullara uyumlu tutmak için bakım ve destek hizmetlerimizi planlıyoruz.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ HAKKIMIZDA ============ -->
+    <section class="section" id="hakkimizda">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Hakkımızda</p>
+          <h2>Benzersiz hız, her müşteriye özel çözüm.</h2>
+          <p>
+            Datcod, bir grup arkadaşın fikirlerini bir kâğıda yazmasıyla yola çıktı. Bugün
+            satınalma, idari işler, sipariş ve depo operasyonlarını yöneten kurumsal
+            programlar geliştiriyoruz.
+          </p>
+          <p>
+            Hazır paketleri zorla uydurmak yerine, işinizin gerçek akışını anlayıp ona göre
+            kurguluyoruz. Bu yüzden projelerimiz devreye alındıktan sonra da yaşamaya
+            devam ediyor.
+          </p>
+          <div class="about-actions">
+            <a class="btn btn-primary" href="#iletisim">Bizimle çalışın</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/company/datcod/" target="_blank" rel="noopener">LinkedIn'de takip edin</a>
+          </div>
+        </div>
+
+        <ul class="value-list reveal">
+          <li>
+            <h3>Modüller birbirine bağlı</h3>
+            <p>Satınalma siparişi doğrudan mal kabule düşer; aynı veriyi ikinci kez girmezsiniz.</p>
+          </li>
+          <li>
+            <h3>İşinize göre özelleştirilir</h3>
+            <p>Programlar hazır çalışır, ama onay akışınız ve alanlarınız size göre kurgulanır.</p>
+          </li>
+          <li>
+            <h3>Sahada test edilmiş</h3>
+            <p>Depo, lojistik ve üretim sahasında gerçekten kullanılan sistemlerden geliyoruz.</p>
+          </li>
+          <li>
+            <h3>Mobil çalışır</h3>
+            <p>Depocu terminali, sürücü uygulaması ve yönetici onayları telefondan yürür.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta-band">
+      <div class="container cta-inner reveal">
+        <div>
+          <h2>İşinizi hızlandırmaya hazır mısınız?</h2>
+          <p>
+            Süreçlerinizi dijitalleştirip hatayı ortadan kaldırıyoruz. İşletmenizin tüm
+            operasyonunu tablet, telefon ya da bilgisayardan yönetin.
+          </p>
+        </div>
+        <a class="btn btn-light btn-lg" href="#iletisim">Ücretsiz ön görüşme planlayın</a>
+      </div>
+    </section>
+
+    <!-- ============ İLETİŞİM ============ -->
+    <section class="section" id="iletisim">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> İletişim</p>
+          <h2>Projenizi konuşalım.</h2>
+          <p class="section-lead">
+            Kısa bir ön görüşmeyle ihtiyacınızı netleştirip yol haritası ve tahmini
+            bütçe çıkarıyoruz. Bu görüşme ücretsizdir.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="ci" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="19" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="m3.5 7 8.5 6 8.5-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <span class="ci-label">E-posta</span>
+                <a href="mailto:info@datcod.com">info@datcod.com</a>
+              </div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4.5 4.5h4l1.6 4-2.2 1.6a12 12 0 0 0 6 6l1.6-2.2 4 1.6v4a1 1 0 0 1-1.1 1C10.6 20.1 3.9 13.4 3.5 5.6a1 1 0 0 1 1-1.1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <span class="ci-label">Telefon</span>
+                <a href="tel:+905339302820">0533 930 28 20</a>
+              </div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg>
+              </span>
+              <div>
+                <span class="ci-label">Adres</span>
+                <span>Akdağ Cd. No:9 D:9, Ümraniye / İstanbul</span>
+              </div>
+            </li>
+          </ul>
+
+          <a class="btn btn-whatsapp" href="https://wa.me/905339302820" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.5-4.1-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9 1-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4-.1.5l-.3.4c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+            WhatsApp'tan yazın
+          </a>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="cf-name">Ad Soyad</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required />
+            <p class="err" data-for="cf-name"></p>
+          </div>
+          <div class="field">
+            <label for="cf-company">Firma</label>
+            <input type="text" id="cf-company" name="company" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="cf-email">E-posta</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required />
+            <p class="err" data-for="cf-email"></p>
+          </div>
+          <div class="field">
+            <label for="cf-phone">Telefon</label>
+            <input type="tel" id="cf-phone" name="phone" autocomplete="tel" />
+          </div>
+          <div class="field field-full">
+            <label for="cf-topic">İlgilendiğiniz konu</label>
+            <select id="cf-topic" name="topic">
+              <option>Lojistik Programı</option>
+              <option>Satınalma Programı</option>
+              <option>İdari İşler Programı</option>
+              <option>Sipariş Yönetim Sistemi</option>
+              <option>Depo, Stok ve Planlama Programı</option>
+              <option>TYRONAI</option>
+              <option>Özel yazılım geliştirme</option>
+              <option>Mobil uygulama</option>
+              <option>Sistem entegrasyonu</option>
+              <option>Diğer</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label for="cf-message">Kısaca ihtiyacınız</label>
+            <textarea id="cf-message" name="message" rows="5" required></textarea>
+            <p class="err" data-for="cf-message"></p>
+          </div>
+          <div class="field field-full form-foot">
+            <button type="submit" class="btn btn-primary btn-lg">Gönder</button>
+            <p class="form-note">Form, varsayılan e-posta uygulamanızı açar.</p>
+          </div>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/img/logo.png" alt="Datcod — Data &amp; Code" width="681" height="201" />
+        <p>
+          Lojistik, satınalma, idari işler, sipariş ve depo programları.<br />
+          İşinizi Datcod ile dijitalleştirin.
+        </p>
+        <a class="footer-linkedin" href="https://www.linkedin.com/company/datcod/" target="_blank" rel="noopener" aria-label="Datcod LinkedIn sayfası">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.4 8.65 22 11 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.03-3.34-2.04 0-2.35 1.59-2.35 3.23V21h-4V9Z"/></svg>
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="Ürünler">
+        <h3>Ürünler</h3>
+        <ul>
+          <li><a href="#urunler">Lojistik Programı</a></li>
+          <li><a href="#urunler">Satınalma Programı</a></li>
+          <li><a href="#urunler">İdari İşler Programı</a></li>
+          <li><a href="#urunler">Sipariş Yönetim Sistemi</a></li>
+          <li><a href="#urunler">Depo, Stok ve Planlama</a></li>
+          <li><a href="#tyronai">TYRONAI</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Hizmetler">
+        <h3>Hizmetler</h3>
+        <ul>
+          <li><a href="#cozumler">Web Proje Geliştirme</a></li>
+          <li><a href="#cozumler">Mobil Uygulama Geliştirme</a></li>
+          <li><a href="#cozumler">Proje Yönetim Danışmanlığı</a></li>
+          <li><a href="#cozumler">Backend Servis &amp; Mimari</a></li>
+          <li><a href="#cozumler">Sistem Entegrasyonları</a></li>
+          <li><a href="#surec">Çalışma Sürecimiz</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>İletişim</h3>
+        <ul>
+          <li><a href="mailto:info@datcod.com">info@datcod.com</a></li>
+          <li><a href="tel:+905339302820">0533 930 28 20</a></li>
+          <li>Akdağ Cd. No:9 D:9<br />Ümraniye / İstanbul</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Datcod. Tüm hakları saklıdır.</p>
+      <p><a href="#anasayfa">Başa dön ↑</a></p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Datcod",
+    "url": "https://datcod.com/",
+    "email": "info@datcod.com",
+    "telephone": "+90 533 930 28 20",
+    "description": "Özel yazılım, mobil uygulama geliştirme ve proje yönetim danışmanlığı.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Akdağ Cd. No:9 D:9",
+      "addressLocality": "Ümraniye",
+      "addressRegion": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "sameAs": ["https://www.linkedin.com/company/datcod/"]
+  }
+  </script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

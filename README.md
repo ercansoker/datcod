@@ -1,0 +1,99 @@
+# Datcod — yeni web sitesi
+
+datcod.com'un yenilenmiş hâli. Bağımlılık yok, build adımı yok: saf HTML + CSS + JavaScript.
+
+## Yapı
+
+```
+datcod/
+├── index.html
+└── assets/
+    ├── css/style.css
+    ├── js/main.js
+    └── img/
+        ├── logo.png             (beyaz wordmark — koyu zemin için)
+        ├── logo-dark.png        (koyu wordmark — açık zemin için)
+        ├── favicon.png
+        ├── slide-1-depo.jpg     (hazır)
+        ├── slide-2-satinalma.jpg    ┐
+        ├── slide-3-entegrasyon.jpg  │ placeholder —
+        ├── slide-4-mail.jpg         │ PROMPTS.md'ye bak
+        ├── slide-5-whatsapp.jpg     ┘
+        └── PROMPTS.md           (görsel üretim promptları)
+```
+
+## Logo
+
+`logo.png` ve `favicon.png` mevcut datcod.com'dan (Wix medya) alınmış orijinal marka
+varlıklarıdır. Orijinal logo yalnızca beyaz metin + amber vurgu içeriyor; sayfa
+kaydırıldığında başlık beyaza döndüğü için beyaz metin `#10162a` ile değiştirilerek
+`logo-dark.png` üretildi (amber vurgu korundu). İkisi CSS ile `.site-header.solid`
+durumuna göre değiştirilir.
+
+Logodaki amber `#f4b108` renk paletine `--gold` olarak eklendi ve bölüm başlıklarındaki
+nokta işaretlerinde kullanılıyor.
+
+Tek dış bağımlılık Google Fonts (Space Grotesk + Inter). İnternetsiz ortamda sistem
+fontlarına düşer, sayfa bozulmaz.
+
+## Yerel önizleme
+
+Proje kökündeki `.claude/launch.json` içinde `datcod-site` yapılandırması tanımlı
+(statik dosya sunucusu, port 5530). Claude Code içinden başlatılabilir, ya da
+klasörü herhangi bir statik sunucuyla açabilirsiniz:
+
+```bash
+npx serve C:/Users/ercan.soker/Desktop/Logiby/datcod -l 5530
+```
+
+Ardından http://localhost:5530 adresini açın.
+
+## Bölümler
+
+| Bölüm | Anchor | İçerik |
+| --- | --- | --- |
+| Hero | `#anasayfa` | Ana mesaj, CTA'lar, 5 slaytlık görsel slider |
+| Ürünler | `#urunler` | 5 ürün kartı (Lojistik tam genişlikte, ilk sırada) + TYRONAI bloğu (`#tyronai`) |
+| Hizmetler | `#cozumler` | 7 hizmet kartı |
+| Süreç | `#surec` | 6 adımlı yol haritası |
+| Hakkımızda | `#hakkimizda` | Şirket anlatısı + 4 değer maddesi |
+| İletişim | `#iletisim` | İletişim bilgileri, WhatsApp, form |
+
+Ürün açıklamaları ve özellik listeleri `logiby_main/Logiby.Landing/{satinalma,idari-isler,siparis-teslimat,depo-stok}`
+sayfalarındaki (ve `lojistik/`) mevcut metinlerden uyarlandı; iki site arasında tutarlılık için oralarda
+bir değişiklik olursa buraya da yansıtılmalı.
+
+## Hero slider
+
+5 slayt, 5,5 saniyede bir çapraz geçişle döner. Fare üzerine gelince veya bir öğe
+odaklanınca durur, ayrılınca devam eder; sekme arka plandayken de durur.
+`prefers-reduced-motion` açıksa otomatik dönüş hiç başlamaz (oklar ve noktalar çalışmaya
+devam eder). Sol/sağ ok tuşlarıyla da gezinilir.
+
+**Görseller:** `slide-1-depo.jpg` hazır (logiby.com render'ı). Kalan 4 tanesi placeholder —
+üretim promptları [assets/img/PROMPTS.md](assets/img/PROMPTS.md) içinde. Dosyaları aynı
+adla değiştirmek yeterli, kodda değişiklik gerekmiyor.
+
+## İletişim formu
+
+Şu an sunucusuz çalışır: doğrulama sonrası `mailto:info@datcod.com` bağlantısını
+açar. Gerçek form gönderimi istenirse `assets/js/main.js` içindeki `submit`
+işleyicisinde `window.location.href = href` satırı bir `fetch` çağrısıyla
+değiştirilebilir (Formspree, Netlify Forms veya kendi API'niz).
+
+## Erişilebilirlik & performans notları
+
+- Tüm bölümler semantik etiketlerle, "İçeriğe geç" bağlantısı mevcut.
+- `prefers-reduced-motion` desteklenir; animasyonlar kapanır.
+- Reveal animasyonu yalnızca JS varken devreye girer (`html.js`), ayrıca
+  IntersectionObserver tetiklenmezse 2.5 sn sonra içerik zorla görünür kılınır.
+- Yatay taşma yok; 375px, 768px ve 1280px'te test edildi.
+- Organization schema.org JSON-LD gömülü.
+
+## Yapılacaklar (opsiyonel)
+
+- Dört ürün için ayrı detay sayfaları (Logiby.Landing'deki sayfaların Datcod tasarımına
+  uyarlanması).
+- Referans/müşteri logoları ve vaka çalışmaları bölümü.
+- `og:image` görseli (şu an tanımlı değil).
+- Gerçek form backend'i.

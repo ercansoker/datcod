@@ -1,0 +1,34 @@
+# DigitalOcean App Platform — statik site tanımı
+# Konsolda "Create App > <repo seç>" dediğinizde bu dosya otomatik okunur.
+# repo satırını kendi hesabınıza göre düzeltin.
+
+name: datcod-site
+region: fra
+
+static_sites:
+  - name: web
+    # GitHub kullanacaksanız:
+    github:
+      repo: KULLANICI_ADI/datcod-site
+      branch: main
+      deploy_on_push: true
+    # GitLab kullanacaksanız yukarıdaki github bloğunu silip şunu açın:
+    # gitlab:
+    #   repo: KULLANICI_ADI/datcod-site
+    #   branch: main
+    #   deploy_on_push: true
+
+    # Derleme adımı yok — dosyalar olduğu gibi yayınlanır.
+    source_dir: /
+    output_dir: /
+
+    index_document: index.html
+    error_document: 404.html
+
+ingress:
+  rules:
+    - component:
+        name: web
+      match:
+        path:
+          prefix: /
