@@ -69,6 +69,48 @@ Alan adı `datcod.com` GoDaddy'de kayıtlı, ad sunucuları şu an Wix'e bakıyo
 (`NS14/NS15.WIXDNS.NET`). Yeni siteye geçmek için GoDaddy tarafında ad
 sunucularının Cloudflare'e çevrilmesi gerekir.
 
+## İletişim formu
+
+Form `/api/contact` adresine JSON gönderir; `src/index.js` içindeki
+Worker doğrulayıp **Resend** üzerinden `info@datcod.com` adresine iletir.
+Gönderenin adresi `Reply-To` olarak eklenir, yani gelen maile doğrudan
+cevap verilebilir.
+
+Koruma katmanları: Cloudflare **Turnstile**, gizli bal küpü alanı ve IP başına
+dakikada 3 gönderim sınırı.
+
+### Kurulum (tek seferlik)
+
+**1. Resend hesabı ve alt alan adı doğrulaması**
+
+[resend.com](https://resend.com) → Domains → Add Domain → `send.datcod.com`
+
+Resend birkaç DNS kaydı verir (DKIM + SPF). Bunları Cloudflare DNS panelinden
+ekleyin. Alt alan adı kullanmamızın sebebi: kök alanın Alastyr SPF kaydına hiç
+dokunulmaması, e-posta akışının risk altına girmemesi.
+
+**2. Turnstile widget’ı**
+
+Cloudflare → Turnstile → Add Site → `datcod.com` ve `www.datcod.com`
+
+İki anahtar üretir:
+
+- **Site key** (herkese açık) → `index.html` içindeki
+  `data-sitekey="TURNSTILE_SITE_KEY"` yerine yazılır
+- **Secret key** (gizli) → Worker secret olarak eklenir
+
+**3. Worker secret’ları**
+
+Workers & Pages → datcod → Settings → Variables and Secrets:
+
+| Ad | Değer |
+| --- | --- |
+| `RESEND_API_KEY` | Resend → API Keys’ten üretilen anahtar |
+| `TURNSTILE_SECRET_KEY` | Turnstile’ın verdiği gizli anahtar |
+
+İkisi de **Secret / Encrypt** olarak kaydedilmeli, düz metin değil.
+Secret eksikse form 500 döner ve Worker günlüğüne `Eksik secret` satırı düşer.
+
 ## Bölümler
 
 | Bölüm | Anchor | İçerik |
@@ -94,13 +136,6 @@ devam eder). Sol/sağ ok tuşlarıyla da gezinilir.
 **Görseller:** `slide-1-depo.jpg` hazır (logiby.com render'ı). Kalan 4 tanesi placeholder —
 üretim promptları [assets/img/PROMPTS.md](assets/img/PROMPTS.md) içinde. Dosyaları aynı
 adla değiştirmek yeterli, kodda değişiklik gerekmiyor.
-
-## İletişim formu
-
-Şu an sunucusuz çalışır: doğrulama sonrası `mailto:info@datcod.com` bağlantısını
-açar. Gerçek form gönderimi istenirse `assets/js/main.js` içindeki `submit`
-işleyicisinde `window.location.href = href` satırı bir `fetch` çağrısıyla
-değiştirilebilir (Formspree, Netlify Forms veya kendi API'niz).
 
 ## Erişilebilirlik & performans notları
 

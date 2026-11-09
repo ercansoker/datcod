@@ -549,9 +549,20 @@
             <textarea id="cf-message" name="message" rows="5" required></textarea>
             <p class="err" data-for="cf-message"></p>
           </div>
+          <!-- Bal küpü: ekranda görünmez, yalnız botlar doldurur -->
+          <div class="hp" aria-hidden="true">
+            <label for="cf-website">Bu alanı boş bırakın</label>
+            <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="cf-turnstile"
+               data-sitekey="TURNSTILE_SITE_KEY"
+               data-language="tr"
+               data-theme="light"></div>
+
           <div class="field field-full form-foot">
             <button type="submit" class="btn btn-primary btn-lg">Gönder</button>
-            <p class="form-note">Form, varsayılan e-posta uygulamanızı açar.</p>
+            <p class="form-note">Mesajınız doğrudan bize ulaşır, genelde aynı gün döneriz.</p>
           </div>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
@@ -634,6 +645,7 @@
   }
   </script>
 
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

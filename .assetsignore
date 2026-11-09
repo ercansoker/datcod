@@ -6,3 +6,6 @@ wrangler.jsonc
 .gitignore
 .assetsignore
 assets/img/PROMPTS.md
+
+# Worker kaynak kodu — statik dosya olarak sunulmamalı
+src

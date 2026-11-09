@@ -183,6 +183,15 @@
       if (e.target.closest(".field.invalid")) setError(e.target, "");
     });
 
+    var submitBtn = form.querySelector('button[type="submit"]');
+
+    var durumGoster = function (metin, tur) {
+      if (!status) return;
+      status.textContent = metin || "";
+      status.classList.remove("ok", "err");
+      if (tur) status.classList.add(tur);
+    };
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -200,28 +209,65 @@
       }
 
       if (!ok) {
-        if (status) status.textContent = "";
+        durumGoster("");
         form.querySelector(".field.invalid input, .field.invalid textarea").focus();
         return;
       }
 
-      var body = [
-        "Ad Soyad: " + name.value.trim(),
-        "Firma: " + (form.elements.company.value.trim() || "-"),
-        "E-posta: " + email.value.trim(),
-        "Telefon: " + (form.elements.phone.value.trim() || "-"),
-        "Konu: " + form.elements.topic.value,
-        "",
-        message.value.trim()
-      ].join("\n");
+      // Turnstile, api.js yüklenince gizli bir input olarak token basar.
+      var tokenAlani = form.querySelector('[name="cf-turnstile-response"]');
+      var token = tokenAlani ? tokenAlani.value : "";
+      if (!token) {
+        durumGoster("Güvenlik doğrulaması henüz tamamlanmadı. Birkaç saniye sonra tekrar deneyin.", "err");
+        return;
+      }
 
-      var href =
-        "mailto:info@datcod.com" +
-        "?subject=" + encodeURIComponent("Web sitesi talebi — " + form.elements.topic.value) +
-        "&body=" + encodeURIComponent(body);
+      var veri = {
+        name: name.value.trim(),
+        company: form.elements.company.value.trim(),
+        email: email.value.trim(),
+        phone: form.elements.phone.value.trim(),
+        topic: form.elements.topic.value,
+        message: message.value.trim(),
+        website: form.elements.website ? form.elements.website.value : "",
+        turnstileToken: token
+      };
 
-      window.location.href = href;
-      if (status) status.textContent = "E-posta uygulamanız açılıyor. Açılmazsa info@datcod.com adresine yazabilirsiniz.";
+      submitBtn.disabled = true;
+      var eskiEtiket = submitBtn.textContent;
+      submitBtn.textContent = "Gönderiliyor…";
+      durumGoster("");
+
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(veri)
+      })
+        .then(function (r) {
+          return r.json().catch(function () { return { ok: false }; });
+        })
+        .then(function (sonuc) {
+          if (sonuc && sonuc.ok) {
+            form.reset();
+            durumGoster("Mesajınız ulaştı. En kısa sürede size döneceğiz.", "ok");
+          } else {
+            durumGoster(
+              (sonuc && sonuc.hata) || "Mesaj gönderilemedi. info@datcod.com adresine yazabilirsiniz.",
+              "err"
+            );
+          }
+        })
+        .catch(function () {
+          durumGoster("Bağlantı kurulamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.", "err");
+        })
+        .then(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = eskiEtiket;
+          // Her gönderimde token bir kez kullanılır; yenisini almak için sıfırla.
+          if (window.turnstile) {
+            try { window.turnstile.reset(); } catch (err) { /* widget henüz yoksa önemsiz */ }
+          }
+        });
     });
   }
 })();

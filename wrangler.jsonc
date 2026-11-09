@@ -1,15 +1,25 @@
 {
-  // Cloudflare Workers — yalnızca statik varlık sunumu (Worker betiği yok).
+  // Cloudflare Workers — statik site + iletişim formu uç noktası.
   // https://developers.cloudflare.com/workers/static-assets/
   "name": "datcod",
   "compatibility_date": "2026-11-09",
+
+  // /api/contact isteklerini karşılayan Worker betiği.
+  "main": "src/index.js",
 
   "assets": {
     // Depo kökü olduğu gibi yayınlanır; derleme adımı yok.
     "directory": "./",
 
+    // Worker'ın statik dosyalara düşebilmesi için.
+    "binding": "ASSETS",
+
     // Bilinmeyen adreslerde 404.html gösterilsin (tek sayfalık site olduğu
     // için SPA modu değil, gerçek 404 istiyoruz).
     "not_found_handling": "404-page"
+  },
+
+  "observability": {
+    "enabled": true
   }
 }
