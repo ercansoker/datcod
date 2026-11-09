@@ -48,6 +48,24 @@ npx serve C:/Users/ercan.soker/Desktop/Logiby/datcod -l 5530
 
 Ardından http://localhost:5530 adresini açın.
 
+## Yayın
+
+**Cloudflare Pages** üzerinde, `ercansoker/datcod` reposunun `main` dalından.
+Derleme adımı yok; depo kökü olduğu gibi yayınlanır.
+
+| Ayar | Değer |
+| --- | --- |
+| Framework preset | None |
+| Build command | (boş) |
+| Build output directory | `/` |
+
+`main` dalına her push otomatik yayına gider. `_headers` dosyası önbellek ve
+güvenlik başlıklarını belirler.
+
+Alan adı `datcod.com` GoDaddy'de kayıtlı, ad sunucuları şu an Wix'e bakıyor
+(`NS14/NS15.WIXDNS.NET`). Yeni siteye geçmek için GoDaddy tarafında ad
+sunucularının Cloudflare'e çevrilmesi gerekir.
+
 ## Bölümler
 
 | Bölüm | Anchor | İçerik |
