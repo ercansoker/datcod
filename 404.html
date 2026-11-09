@@ -20,14 +20,15 @@
     }
     .nf-inner { max-width: 440px; }
     .nf img { height: 42px; width: auto; margin: 0 auto 2.4rem; display: block; }
-    .nf-code {
+    .nf h1 { font-size: 1.35rem; margin: 1rem 0 .6rem; }
+    .nf p { color: rgba(255, 255, 255, .62); font-size: .95rem; margin-bottom: 2rem; }
+    /* .nf p kuralından sonra gelmeli: aynı özgüllükte sonraki kural kazanır */
+    .nf p.nf-code {
       font-family: var(--font-head); font-size: clamp(3.4rem, 12vw, 5rem);
-      line-height: 1; letter-spacing: -.03em;
+      line-height: 1; letter-spacing: -.03em; margin-bottom: 0;
       background: linear-gradient(100deg, var(--cyan-300), var(--blue-600));
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
-    .nf h1 { font-size: 1.35rem; margin: 1rem 0 .6rem; }
-    .nf p { color: rgba(255, 255, 255, .62); font-size: .95rem; margin-bottom: 2rem; }
   </style>
 </head>
 <body>
