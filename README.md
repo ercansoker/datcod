@@ -50,17 +50,20 @@ Ardından http://localhost:5530 adresini açın.
 
 ## Yayın
 
-**Cloudflare Pages** üzerinde, `ercansoker/datcod` reposunun `main` dalından.
-Derleme adımı yok; depo kökü olduğu gibi yayınlanır.
+**Cloudflare Workers** (statik varlık sunumu) üzerinde, `ercansoker/datcod`
+reposunun `main` dalından. Derleme adımı yok; depo kökü olduğu gibi yayınlanır.
 
-| Ayar | Değer |
+Yapılandırma `wrangler.jsonc` içinde. Build command boş kalır, deploy komutu
+`npx wrangler deploy`. `main` dalına her push otomatik yayına gider.
+
+| Dosya | İşlevi |
 | --- | --- |
-| Framework preset | None |
-| Build command | (boş) |
-| Build output directory | `/` |
+| `wrangler.jsonc` | Proje adı, statik varlık dizini, 404 davranışı |
+| `_headers` | Önbellek ve güvenlik başlıkları |
+| `.assetsignore` | Depoda durup yayınlanmayacak dosyalar |
 
-`main` dalına her push otomatik yayına gider. `_headers` dosyası önbellek ve
-güvenlik başlıklarını belirler.
+Not: Cloudflare yeni hesaplarda Pages akışını gizleyip Workers'a yönlendiriyor.
+Sonuç aynı — statik site, ücretsiz katman, global CDN.
 
 Alan adı `datcod.com` GoDaddy'de kayıtlı, ad sunucuları şu an Wix'e bakıyor
 (`NS14/NS15.WIXDNS.NET`). Yeni siteye geçmek için GoDaddy tarafında ad

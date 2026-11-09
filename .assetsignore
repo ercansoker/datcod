@@ -1,0 +1,8 @@
+# Bu dosyalar depoda dursun ama siteyle birlikte yayınlanmasın.
+# https://developers.cloudflare.com/workers/static-assets/
+
+README.md
+wrangler.jsonc
+.gitignore
+.assetsignore
+assets/img/PROMPTS.md

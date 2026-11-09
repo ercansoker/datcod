@@ -1,0 +1,15 @@
+{
+  // Cloudflare Workers — yalnızca statik varlık sunumu (Worker betiği yok).
+  // https://developers.cloudflare.com/workers/static-assets/
+  "name": "datcod",
+  "compatibility_date": "2026-11-09",
+
+  "assets": {
+    // Depo kökü olduğu gibi yayınlanır; derleme adımı yok.
+    "directory": "./",
+
+    // Bilinmeyen adreslerde 404.html gösterilsin (tek sayfalık site olduğu
+    // için SPA modu değil, gerçek 404 istiyoruz).
+    "not_found_handling": "404-page"
+  }
+}
